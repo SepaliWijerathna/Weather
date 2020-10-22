@@ -1,6 +1,8 @@
 const operations = require('./db');
 
 exports.register = (req) => {
-    return operations.getData.getData('Temperature')
+    operations.getData('Temperature').then((result=>{
+        console.log(result);
+    }))
     
 }

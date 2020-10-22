@@ -6,8 +6,8 @@ const db_config = JSON.parse(fs.readFileSync(path.join(__dirname, '../config/db_
 // database connection create
 const connection = mysql.createConnection(db_config);
 connection.connect((err) => {
-    if (err) throw err;
+    if (err) console.log("DB err");
     else console.log('database connection okay');
 });
 
-module.exports = connection;
+module.exports = connection; 
