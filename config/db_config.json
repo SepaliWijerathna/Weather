@@ -1,0 +1,6 @@
+{
+    "host":"localhost",
+    "user":"root",
+    "password":"",
+    "database":"CREATE DATABASE IF NOT EXISTS Environment_monitoring_Application_Database"
+}
