@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var data = require('../Models/temperatureModel')
+var temp = require('../Models/temperatureModel')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send(data.register());
+router.get('/', async function(req, res, next) {
+  var data_;
+  await temp.getAllData().then((data)=>{
+    data_ = data;
+  });
+  res.send(data_);
 });
 
 module.exports = router;

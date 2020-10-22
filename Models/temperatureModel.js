@@ -1,8 +1,11 @@
 const operations = require('./db');
 
-exports.register = (req) => {
-    operations.getData('Temperature').then((result=>{
-        console.log(result);
-    }))
-    
+async function getAllData(req){
+    var result_;
+    await operations.getData('Temperature').then((result=>{
+        result_ = result;
+    }));
+    return result_;
 }
+
+exports.getAllData = getAllData;
