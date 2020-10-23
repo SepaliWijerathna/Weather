@@ -2,5 +2,6 @@
     "host":"localhost",
     "user":"root",
     "password":"",
-    "database":"Environment_monitoring_Application_Database"
+    "port":8080,
+    "database":"environment_monitoring_application_database"
 }
