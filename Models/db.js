@@ -1,6 +1,7 @@
 const connection = require('./db_connection');
 const fs = require('fs');
 const path = require('path');
+const { query } = require('express');
 const Json_res = JSON.parse(fs.readFileSync(path.join(__dirname, 'response_format.json')));
 
 
@@ -23,5 +24,12 @@ async function getData(table_name) {
     });
 }
 
+function saveData(table_name,data) {
+    q = "INSERT INTO `"+table_name+"`  VALUES (NULL, '"+data[0]+"', '"+data[1]+"', '"+data[2]+"');"
+    console.log(q);
+    connection.query(q);;
+}
+
 exports.getData = getData;
+exports.saveData = saveData;
 
