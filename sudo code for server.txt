@@ -1,0 +1,33 @@
+sudo code for server
+
+
+post request
+
+As the xml string is reciving as a stream - get the strem of data and save in "req" object and pass to router
+get the xml string and pass to relevent model (ex - Temparature,Humidity etc)
+Model converts the xml string into json object and extract the information from json object
+Then the model will send the data to db objct to save the data in database
+the db class will save the data on database
+
+get
+
+when get request recived for an end point, the router will call model class to get the relevent data
+the model class call th db class to get data
+then db call query the databse and return
+model will return to router
+The roter will send the response to the clint
+
+
+List
+
+NodeMCU
+sensors -   temperature sensors
+            humidity sensor
+            rain sensor
+            Barometer sensor
+            Soil Humidity sensor
+            gas detector
+            wind speed sensor
+
+Breadboard/Custom ProtoShield
+Jumper wires

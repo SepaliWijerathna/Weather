@@ -1,0 +1,20 @@
+Sudo Code nodeMCU
+
+initialize sensors
+try to extablish a connection to the server
+loop1 :  collect sensor data
+        pre proccess row sensor data (reject Outliers/Anomalies and other processing)
+        loop2: loop for 15 times
+            sum = sum + newSensorReading
+            wait 1 inute
+        
+        AvgSensor Reading = sum/15
+        read the EEPRom and get the saved sensor data
+        Make the xml strings based on sensor and dates
+        send the xml string to relevent end-points
+        
+        if(request is successful):
+            clear the EEPRom
+        else:
+            save newly collected data on EEPRom
+        goto loop1
