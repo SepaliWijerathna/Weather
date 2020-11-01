@@ -6,7 +6,7 @@ loop1 :  collect sensor data
         pre proccess row sensor data (reject Outliers/Anomalies and other processing)
         loop2: loop for 15 times
             sum = sum + newSensorReading
-            wait 1 inute
+            wait 1 minute
         
         AvgSensor Reading = sum/15
         read the EEPRom and get the saved sensor data
